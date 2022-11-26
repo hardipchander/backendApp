@@ -1,0 +1,30 @@
+{
+  "name": "backendapp",
+  "version": "1.0.0",
+  "description": "This is the backend repo for my full stack application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "testing": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardipchander/backendApp.git"
+  },
+  "author": "Hardip Chander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hardipchander/backendApp/issues"
+  },
+  "homepage": "https://github.com/hardipchander/backendApp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "pgtools": "^0.3.2",
+    "sequelize": "^6.25.8"
+  }
+}
