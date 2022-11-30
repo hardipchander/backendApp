@@ -24,7 +24,7 @@ router.put('/:id', asyncHandler(async(req, res) => {
     await Task.update(req.body,{ where: {id: req.params.id} });
 
     // Return the updated task through req object
-    let task = await Course.findByPk(req.params.id);
+    let task = await Task.findByPk(req.params.id);
     res.status(201).json(task);
 }));
 
