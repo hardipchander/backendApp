@@ -7,6 +7,8 @@ const cors=require('cors');
 // Create the express app
 const myApp=express();
 
+// Need the utilities for the database 
+
 // Just for debugging
 console.log("express app is running");
 
