@@ -6,7 +6,7 @@ const {DataBaseName,dbUserName, dbPassword}= require('./configureDB.js');
 const configure= {
     user: dbUserName,
     host: "localhost",
-    port: 5420,
+    port: 5432,
     password: dbPassword
 };
 

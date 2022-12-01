@@ -15,6 +15,7 @@ const seedDataBase=require('./db/utilities/seedDataBase');
 const db=require('./db');
 
 //sync and seed the database force true will reset the database every time the server is shut down and started again
+// Remove the {force: true} option in sync
 const syncDatabase = async () => {
     try {
         await db.sync({force: true});
@@ -76,6 +77,7 @@ runApp();
 console.log("express app is running");
 
 // port number and the server is on the port number 
+// PORTNUMBER must match on the fronend REMMBER THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const PORTNUMBER=5000;
 myApp.listen(PORTNUMBER, ()=> {`The server is on ${PORTNUMBER}`});
 

@@ -12,7 +12,7 @@ const seedDataBase=async () => {
     const intialTask=await Task.create({
         description: "Teach HTML to the class",
         prioritylevel: "Important",
-        completionstatus: "Half Way There"
+        completionstatus: false
     });
 
     await intialTask.setEmployee(intialEmployee);
