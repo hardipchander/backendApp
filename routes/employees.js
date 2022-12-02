@@ -1,3 +1,5 @@
+// Link to this route : http://localhost:5000/api/employees
+
 // Need data from our Models/Tables
 const {Employee,Task}=require('../db/tables');
 const express=require('express');
@@ -9,7 +11,7 @@ const asyncHandler=require('express-async-handler');
 // Get all the employees from model/table, need sequelize function find all
 router.get("/", asyncHandler( async(req, res) => {
     let employees=await Employee.findAll({include: [Task]});
-    res.statusCode(200).json(employees);
+    res.status(200).json(employees);
 }));
 
 // Get Employee based on id using sequelize method findBy
