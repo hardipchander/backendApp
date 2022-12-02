@@ -6,12 +6,11 @@ const router=express.Router();
 // Asyc Handler for cleaner code, don't need next function here
 const asyncHandler=require('express-async-handler');
 
-// Get all the employees from model/table, need sequelize function 
+// Get all the employees from model/table, need sequelize function find all
 router.get("/", asyncHandler( async(req, res) => {
     let employees=await Employee.findAll({include: [Task]});
     res.statusCode(200).json(employees);
 }));
-
 
 // Export our employees Router
 module.exports = router;

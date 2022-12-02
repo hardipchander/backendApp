@@ -1,4 +1,3 @@
-// Where the execution begins for the node app
 // import express and cors for the server
 const express=require('express');
 const cors=require('cors');

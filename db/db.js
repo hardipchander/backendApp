@@ -3,7 +3,7 @@ const Sequelize=require('sequelize');
 
 // Have the Database infor
 const {DataBaseName,dbUserName, dbPassword}= require('./utilities/configureDB');
-// Debug print here
+
 console.log(`Connecting to ${DataBaseName}`);
 
 // DB instance here
