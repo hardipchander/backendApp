@@ -24,8 +24,20 @@ router.put('/:id', asyncHandler(async(req, res) => {
     await Task.update(req.body,{ where: {id: req.params.id} });
 
     // Return the updated task through req object
-    let task = await Task.findByPk(req.params.id);
-    res.status(201).json(task);
+    let task = await Task.findByPk(req.params.id, {include: [Employee]});
+    res.status(200).json(task);
+}));
+
+// Route for adding a new Task
+router.post('/', asyncHandler(async(req, res) => {
+    let newTask = await Task.create(req.body);
+    res.status(200).json(newTask);
+}));
+
+// Route to remove the Task based on id
+router.delete('/:id', asyncHandler(async(req, res) => {
+    await Task.destroy({where: {id: req.params.id}});
+    res.status(200).json("Task deleted");
 }));
 
 // Export our tasks Router 
