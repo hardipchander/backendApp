@@ -48,7 +48,7 @@ const configureApp = async () => {
   
     // Handle page not found 404 error classic
     myApp.use((req, res, next) => {
-      const error = new Error("Not Found, Please inspect the URL again!");
+      const error = new Error("Not Found, Please inspect the URL again!!!!!!!!!!");
       error.status = 404;
       next(error);
     });
@@ -77,6 +77,7 @@ console.log("express app is running");
 
 // port number and the server is on the port number 
 // PORTNUMBER must match on the fronend REMMBER THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Link is http://localhost:5000/api
 const PORTNUMBER=5000;
 myApp.listen(PORTNUMBER, ()=> {`The server is on ${PORTNUMBER}`});
 
