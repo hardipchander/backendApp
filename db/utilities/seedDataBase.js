@@ -9,13 +9,32 @@ const seedDataBase=async () => {
         department: "CoderSchool"
     });
 
+    const intialEmployeeTwo=await Employee.create({
+        firstname: "John",
+        lastname: "Delfino",
+        department: "Math"
+    });
+
     const intialTask=await Task.create({
-        description: "Teach HTML to the class",
+        description: "HTML",
         prioritylevel: "Important",
         completionstatus: false
     });
 
+    const intialTaskTwo=await Task.create({
+        description: "CSS",
+        prioritylevel: "Urgent",
+        completionstatus: true
+    });
+
+    const intialTaskThree=await Task.create({
+        description: "JavaScript",
+        prioritylevel: "Needed",
+        completionstatus: false
+    });
+
     await intialTask.setEmployee(intialEmployee);
+    await intialTaskTwo.setEmployee(intialEmployeeTwo);
 };
 
 module.exports=seedDataBase;
