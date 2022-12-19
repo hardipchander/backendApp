@@ -6,7 +6,7 @@ const seedDataBase=async () => {
     const intialEmployee=await Employee.create({
         firstname: "Hardip",
         lastname: "Chander",
-        department: "CoderSchool"
+        department: "Computer Science"
     });
 
     const intialEmployeeTwo=await Employee.create({
@@ -16,20 +16,20 @@ const seedDataBase=async () => {
     });
 
     const intialTask=await Task.create({
-        description: "HTML",
+        description: "Teach a lesson",
         prioritylevel: "Important",
         completionstatus: false
     });
 
     const intialTaskTwo=await Task.create({
-        description: "CSS",
-        prioritylevel: "Urgent",
-        completionstatus: true
+        description: "5 Calculus problems",
+        prioritylevel: "Needed",
+        completionstatus: false
     });
 
     const intialTaskThree=await Task.create({
-        description: "JavaScript",
-        prioritylevel: "Needed",
+        description: "Read lliad",
+        prioritylevel: "Urgent",
         completionstatus: false
     });
 
